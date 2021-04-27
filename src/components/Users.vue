@@ -1,26 +1,76 @@
  <template>
       <div class="container">
-        <h3>Users:</h3>
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">Id</th>
-              <th scope="col">Name</th>
-              <th scope="col">Email</th>
-              <th scope="col">City</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="user in users" v-bind:key="user.id"> 
-              <th scope="row">{{user.id}}</th>
-              <td>{{user.name}}</td>
-              <td>{{user.email}}</td>
-              <td>{{user.address.city}}</td>
-            </tr>
-          </tbody>
-        </table> 
+        <div stlye="margin-bottom: 30px;" class="row"> 
+          <div class="col-md-4"> 
+              <b-card
+                    title="Cocktail Nr. 1"
+                    img-src="https://picsum.photos/600/300/?image=25"
+                    img-alt="Image"
+                    img-top
+                    class="mb-2">
+                    <b-button href="#" variant="primary">MIX</b-button>
+                  </b-card>
+            </div>
+            <div class="col-md-4"> 
+             <b-card
+                    title="Cocktail Nr. 2"
+                    img-src="https://picsum.photos/600/300/?image=25"
+                    img-alt="Image"
+                    img-top
+                    class="mb-2">
+                    <b-button href="#" variant="primary">MIX</b-button>
+                  </b-card>
+            </div>
+
+            <div class="col-md-4"> 
+              <b-card
+                  title="Cocktail Nr. 3"
+                    img-src="https://picsum.photos/600/300/?image=25"
+                    img-alt="Image"
+                    img-top
+                    class="mb-2">
+                    <b-button href="#" variant="primary">MIX</b-button>
+                  </b-card>
+            </div>
+        </div>
+        <div class="row"> 
+          <div class="col-md-4"> 
+              <b-card
+                    title="Cocktail Nr. 1"
+                    img-src="https://picsum.photos/600/300/?image=25"
+                    img-alt="Image"
+                    img-top
+                    class="mb-2">
+                    <b-button href="#" variant="primary">MIX</b-button>
+                  </b-card>
+            </div>
+            <div class="col-md-4"> 
+             <b-card
+                    title="Cocktail Nr. 2"
+                    img-src="https://picsum.photos/600/300/?image=25"
+                    img-alt="Image"
+                    img-top
+                    class="mb-2">
+                    <b-button href="#" variant="primary">MIX</b-button>
+                  </b-card>
+            </div>
+
+            <div class="col-md-4"> 
+              <b-card
+                  title="Cocktail Nr. 3"
+                    img-src="https://picsum.photos/600/300/?image=25"
+                    img-alt="Image"
+                    img-top
+                    class="mb-2">
+                    <b-button href="#" variant="primary">MIX</b-button>
+                  </b-card>
+            </div>
+        </div>
       </div> 
     </template>
+
+
+   
     
 <script>
   import axios from 'axios';
