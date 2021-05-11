@@ -1,71 +1,94 @@
  <template>
-      <div class="container">
-        <div stlye="margin-bottom: 30px;" class="row"> 
-          <div class="col-md-4"> 
+      <div class="container" style="margin-bottom:70px;">
+        <div style="margin-bottom: 50px;"> 
+        <div class="row"> 
+          <div class="col-md-3"> 
               <b-card
-                    title="Cocktail Nr. 1"
-                    img-src="https://picsum.photos/600/300/?image=25"
+                    title="Acapulco"
+                    img-src="cocktail_acapulco-1.png"
                     img-alt="Image"
-                    img-top
                     class="mb-2">
-                    <b-button href="#" variant="primary">MIX</b-button>
+                    
                   </b-card>
             </div>
-            <div class="col-md-4"> 
+            <div class="col-md-3"> 
              <b-card
-                    title="Cocktail Nr. 2"
-                    img-src="https://picsum.photos/600/300/?image=25"
+                    title="Atomic Cat"
+                    img-src="cocktail_atomic_cat-1.png"
                     img-alt="Image"
                     img-top
                     class="mb-2">
-                    <b-button href="#" variant="primary">MIX</b-button>
+                    
                   </b-card>
             </div>
 
-            <div class="col-md-4"> 
+            <div class="col-md-3"> 
               <b-card
-                  title="Cocktail Nr. 3"
-                    img-src="https://picsum.photos/600/300/?image=25"
+                  title="Cuba Libre"
+                    img-src="cocktail_cuba_libre-1.png"
                     img-alt="Image"
                     img-top
                     class="mb-2">
-                    <b-button href="#" variant="primary">MIX</b-button>
+                    
                   </b-card>
             </div>
+             <div class="col-md-3"> 
+              <b-card
+                  title="Mojito"
+                    img-src="cocktail_mojito-1.png"
+                    img-alt="Image"
+                    img-top
+                    class="mb-2">
+                    
+                  </b-card>
+            </div>
+        </div>
         </div>
         <div class="row"> 
-          <div class="col-md-4"> 
+          <div class="col-md-3"> 
               <b-card
-                    title="Cocktail Nr. 1"
-                    img-src="https://picsum.photos/600/300/?image=25"
+                    title="Pina Colada"
+                    img-src="cocktail_pina_colada-1.png"
                     img-alt="Image"
                     img-top
                     class="mb-2">
-                    <b-button href="#" variant="primary">MIX</b-button>
+                    
                   </b-card>
             </div>
-            <div class="col-md-4"> 
+            <div class="col-md-3"> 
              <b-card
-                    title="Cocktail Nr. 2"
-                    img-src="https://picsum.photos/600/300/?image=25"
+                    title="Poker Face"
+                    img-src="cocktail_poker_face-1.png"
                     img-alt="Image"
                     img-top
                     class="mb-2">
-                    <b-button href="#" variant="primary">MIX</b-button>
+                    
                   </b-card>
             </div>
 
-            <div class="col-md-4"> 
+            <div class="col-md-3"> 
               <b-card
-                  title="Cocktail Nr. 3"
-                    img-src="https://picsum.photos/600/300/?image=25"
+                  title="Tequila Sunrise"
+                    img-src="cocktail_tequila_sunrise-1.png"
                     img-alt="Image"
                     img-top
                     class="mb-2">
-                    <b-button href="#" variant="primary">MIX</b-button>
+                    
+                  </b-card>
+            </div>
+             <div class="col-md-3"> 
+              <b-card
+                  title="Virgin Mojito"
+                    img-src="cocktail_virgin_mojito-1.png"
+                    img-alt="Image"
+                    img-top
+                    class="mb-2">
+                    
                   </b-card>
             </div>
         </div>
+        
+
       </div> 
     </template>
 
@@ -73,22 +96,13 @@
    
     
 <script>
-  import axios from 'axios';
   export default {
-    name: 'Users',
-    data() {
-      return {
-        users: null,
-      };
-    },
-    created: function() {
-      axios
-        .get('https://jsonplaceholder.typicode.com/users')
-        .then(res => {
-          this.users = res.data;
-        })
+  methods: {
+    showModal() {
+     
     }
-  }
+  },
+}
 </script>
 <style>
   h3 {
