@@ -17,6 +17,7 @@
                     img-src="cocktail_atomic_cat-1.png"
                     img-alt="Image"
                     img-top
+                    v-on:click="mix('awdawd')"
                     class="mb-2">
                     
                   </b-card>
@@ -91,15 +92,22 @@
 
       </div> 
     </template>
-
-
-   
-    
 <script>
+
   export default {
   methods: {
-    showModal() {
-     
+    async mix(title) {
+
+      console.log(title);
+
+    const requestOptions = {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ title: "Vue POST Request Example" })
+  };
+  fetch("getraenk.php", requestOptions)
+   // .then(response => response.json())
+   // .then(data => (this.postId = data.id));
     }
   },
 }

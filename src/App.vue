@@ -3,7 +3,6 @@
     <div style="margin-bottom: 70px;" class="container">
     <div class="row">
       <div class = "col-md-12">
-      
       <h1> <strong> Wähle deinen Cocktail </strong></h1>
       </div>
       </div>
@@ -19,6 +18,14 @@ export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+     methods: {
+    myMethod () {
+      this.$http.post(
+        '/api/items', 
+        { name: "my item" }
+      );
+    }
   }
 }
 </script>
