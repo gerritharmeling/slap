@@ -114,18 +114,17 @@ export default {
       console.log(title);
 
       const requestOptions = {
-        method: "POST",
+        method: "GET",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ cocktail: 1 }),
       };
-      fetch("getraenk.php", requestOptions)
+      fetch("getraenk.php?id=1", requestOptions)
         .then(async (response) => {
           const data = await response;
 
+          this.countLoader(15);
+
           console.log("ok", data);
         });
-
-      this.countLoader(4);
     },
     countLoader(time) {
       //time is in seconds
