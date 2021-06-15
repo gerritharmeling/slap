@@ -1,119 +1,148 @@
  <template>
-      <div class="container" style="margin-bottom:70px;">
-        <div style="margin-bottom: 50px;"> 
-        <div class="row"> 
-          <div class="col-md-3"> 
-              <b-card
-                    title="Acapulco"
-                    img-src="cocktail_acapulco-1.png"
-                    img-alt="Image"
-                    class="mb-2">
-                    
-                  </b-card>
-            </div>
-            <div class="col-md-3"> 
-             <b-card
-                    title="Atomic Cat"
-                    img-src="cocktail_atomic_cat-1.png"
-                    img-alt="Image"
-                    img-top
-                    v-on:click="mix('awdawd')"
-                    class="mb-2">
-                    
-                  </b-card>
-            </div>
+  <div class="container" style="margin-bottom: 70px">
+    <div style="display: none" id="loader" class="row">
+      <div class="offset-md-3 col-md-6">
+        <b-card
+          title="Currently mixing"
+          img-src="load.gif"
+          img-top
+          v-on:click="mix('')"
+          class="mb-2"
+        >
+        </b-card>
+      </div>
+    </div>
 
-            <div class="col-md-3"> 
-              <b-card
-                  title="Cuba Libre"
-                    img-src="cocktail_cuba_libre-1.png"
-                    img-alt="Image"
-                    img-top
-                    class="mb-2">
-                    
-                  </b-card>
-            </div>
-             <div class="col-md-3"> 
-              <b-card
-                  title="Mojito"
-                    img-src="cocktail_mojito-1.png"
-                    img-alt="Image"
-                    img-top
-                    class="mb-2">
-                    
-                  </b-card>
-            </div>
-        </div>
-        </div>
-        <div class="row"> 
-          <div class="col-md-3"> 
-              <b-card
-                    title="Pina Colada"
-                    img-src="cocktail_pina_colada-1.png"
-                    img-alt="Image"
-                    img-top
-                    class="mb-2">
-                    
-                  </b-card>
-            </div>
-            <div class="col-md-3"> 
-             <b-card
-                    title="Poker Face"
-                    img-src="cocktail_poker_face-1.png"
-                    img-alt="Image"
-                    img-top
-                    class="mb-2">
-                    
-                  </b-card>
-            </div>
+    <div id="contentcontainer">
+      <div style="margin-bottom: 50px">
+        <div class="row">
+          <div class="col-md-3">
+            <b-card
+              title="Acapulco"
+              img-src="cocktail_acapulco-1.png"
+              img-alt="Image"
+              v-on:click="mix('awdawd')"
+              class="mb-2"
+            >
+            </b-card>
+          </div>
+          <div class="col-md-3">
+            <b-card
+              id="1"
+              title="Atomic Cat"
+              img-src="cocktail_atomic_cat-1.png"
+              img-alt="Image"
+              img-top
+              v-on:click="mix('awdawd')"
+              class="mb-2"
+            >
+            </b-card>
+          </div>
 
-            <div class="col-md-3"> 
-              <b-card
-                  title="Tequila Sunrise"
-                    img-src="cocktail_tequila_sunrise-1.png"
-                    img-alt="Image"
-                    img-top
-                    class="mb-2">
-                    
-                  </b-card>
-            </div>
-             <div class="col-md-3"> 
-              <b-card
-                  title="Virgin Mojito"
-                    img-src="cocktail_virgin_mojito-1.png"
-                    img-alt="Image"
-                    img-top
-                    class="mb-2">
-                    
-                  </b-card>
-            </div>
+          <div class="col-md-3">
+            <b-card
+              title="Cuba Libre"
+              img-src="cocktail_cuba_libre-1.png"
+              img-alt="Image"
+              img-top
+              class="mb-2"
+            >
+            </b-card>
+          </div>
+          <div class="col-md-3">
+            <b-card
+              title="Mojito"
+              img-src="cocktail_mojito-1.png"
+              img-alt="Image"
+              img-top
+              class="mb-2"
+            >
+            </b-card>
+          </div>
         </div>
-        
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <b-card
+            title="Pina Colada"
+            img-src="cocktail_pina_colada-1.png"
+            img-alt="Image"
+            img-top
+            class="mb-2"
+          >
+          </b-card>
+        </div>
+        <div class="col-md-3">
+          <b-card
+            title="Poker Face"
+            img-src="cocktail_poker_face-1.png"
+            img-alt="Image"
+            img-top
+            class="mb-2"
+          >
+          </b-card>
+        </div>
 
-      </div> 
-    </template>
+        <div class="col-md-3">
+          <b-card
+            title="Tequila Sunrise"
+            img-src="cocktail_tequila_sunrise-1.png"
+            img-alt="Image"
+            img-top
+            class="mb-2"
+          >
+          </b-card>
+        </div>
+        <div class="col-md-3">
+          <b-card
+            title="Virgin Mojito"
+            img-src="cocktail_virgin_mojito-1.png"
+            img-alt="Image"
+            img-top
+            class="mb-2"
+          >
+          </b-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
 <script>
-
-  export default {
+export default {
   methods: {
     async mix(title) {
-
       console.log(title);
 
-    const requestOptions = {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ title: "Vue POST Request Example" })
-  };
-  fetch("getraenk.php", requestOptions)
-   // .then(response => response.json())
-   // .then(data => (this.postId = data.id));
-    }
+      const requestOptions = {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ cocktail: 1 }),
+      };
+      fetch("getraenk.php", requestOptions)
+        .then(async (response) => {
+          const data = await response;
+
+          console.log("ok", data);
+        });
+
+      this.countLoader(4);
+    },
+    countLoader(time) {
+      //time is in seconds
+
+      document.getElementById("contentcontainer").style.display = "none";
+      document.getElementById("loader").style.display = "block";
+
+      setTimeout(function () {
+        document.getElementById("contentcontainer").style.display = "block";
+        document.getElementById("loader").style.display = "none";
+      }, time * 1000);
+    },
   },
-}
+};
 </script>
 <style>
-  h3 {
-    margin-bottom: 5%;
-  }
+h3 {
+  margin-bottom: 5%;
+}
 </style>
