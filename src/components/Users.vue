@@ -6,13 +6,13 @@
           title="Currently mixing"
           img-src="load.gif1"
           img-top
-          class="mb-2"
+          class="mb-21"
         >
         </b-card>
       </div>
     </div>
 
-    <div id="contentcontainer">
+    <div id="contentcontainer3">
       <div style="margin-bottom: 50px">
         <div class="row">
           <div class="col-md-3 col-6">
