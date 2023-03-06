@@ -5,7 +5,7 @@
         <b-card
           title="Currently mixing"
           img-src="load.gif"
-          img-top
+          img-top1
           class="mb-2"
         >
         </b-card>
