@@ -2,8 +2,8 @@
   <div class="container" style="margin-bottom: 70px">
     <div style="display: none" id="loader" class="row">
       <div class="offset-md-3 col-md-6">
-        <b-card
-          title="Currently mixing"
+        <b-card2
+          title="Currently mixing"2
           img-src="load.gif"
           img-top1
           class="mb-2"
