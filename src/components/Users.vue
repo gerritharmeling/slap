@@ -6,7 +6,7 @@
           title="Currently mixing"
           img-src="load.gif1"
           img-top
-          class="mb-2"
+          class="mb-21"
         >
         </b-card>
       </div>
