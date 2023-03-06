@@ -1,6 +1,6 @@
  <template>
   <div class="container" style="margin-bottom: 70px">
-    <div style="display: none" id="loader" class="row">
+    <div style="display: none" id="loader" cl2ass="row">
       <div class="offset-md-3 col-md-6">
         <b-card
           title="Currently mixing"
