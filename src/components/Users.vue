@@ -4,7 +4,7 @@
       <div class="offset-md-3 col-md-6">
         <b-card
           title="Currently mixing"
-          img-src="load.gif"
+          img-src="load.gif1"
           img-top
           class="mb-2"
         >
