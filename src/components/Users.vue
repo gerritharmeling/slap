@@ -7,7 +7,7 @@
           img-src="load.gif"
           img-top
           class="mb-2"
-        >
+        >1
         </b-card>
       </div>
     </div>
